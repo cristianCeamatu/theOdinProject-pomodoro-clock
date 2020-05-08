@@ -5,7 +5,7 @@ body {
   margin: 0;
   bottom: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #363636;
+  color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,6 +24,11 @@ ul {
   width: 100%;
   padding: 20px;
   text-align: center;
+  margin: 30px auto;
+}
+
+h1 {
+  color: #212121;
 }
 
 /* Pomodoro Clock */
@@ -34,8 +39,19 @@ ul {
   padding: 30px;
   font-size: 30px;
   border-radius: 20px;
-  background: rgb(198,200,200);
-  background: linear-gradient(90deg, rgba(198,200,200,1) 0%, rgba(178,212,223,1) 0%, rgba(136,176,209,1) 14%, rgba(73,147,209,0.9136029411764706) 76%, rgba(57,150,230,1) 100%, rgba(217,217,217,1) 100%);
+  background:
+  linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 /* Settings */
@@ -79,4 +95,29 @@ ul {
 .display ul li:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+
+.display .main-display {
+  color: #262626;
+  border-radius: 20px;
+  padding: 10px;
+  -webkit-box-shadow: inset 0px 0px 2px 2px rgba(148,148,148,1);
+  -moz-box-shadow: inset 0px 0px 2px 2px rgba(148,148,148,1);
+  box-shadow: inset 0px 0px 2px 2px rgba(148,148,148,1);
+  background-color: #6d695c;
+  background:
+  radial-gradient(black 3px, transparent 4px),
+  radial-gradient(black 3px, transparent 4px),
+  linear-gradient(#fff 4px, transparent 0),
+  linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+  linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+  #fff;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+/* Toogled classes */
+.active {
+  color: #ff4444;
+  pointer-events: none;
 }

@@ -38,17 +38,6 @@ resetEl.addEventListener('click', reset);
 
 
 
-function secondsToMinutes(time) {
-  let minutes = Math.floor(time / 60);
-  return minutes;
-}
-
-function secondsToMinutesSeconds(time) {
-  let minutes = Math.floor(time / 60);
-  let seconds = time - minutes * 60;
-  return `${minutes} : ${seconds}`;
-}
-
 function play() {
   if (state.timer === false) {
     startClock = setInterval(tick , 100);
@@ -74,11 +63,15 @@ function play() {
       state.breakLeft = state.breakLeft - 1;
     } 
   }
+
+  playEl.classList.toggle('active');
+  timeRemainingEl.classList.toggle('active');
 }
 
 function pause() {
   clearInterval(startClock);
   state.timer = false;
+  [...document.querySelectorAll('.active')].forEach((el) => el.classList.remove('active'));
 }
 
 function stop() {
@@ -87,6 +80,7 @@ function stop() {
   state.sessionLeft = state.session;
   state.breakLeft = state.break;
   timeRemainingEl.textContent = secondsToMinutesSeconds(state[state.currentPeriod.toLowerCase()]);
+  [...document.querySelectorAll('.active')].forEach((el) => el.classList.remove('active'));
 }
 
 function reset() {
@@ -103,6 +97,7 @@ function reset() {
   breakDisplayEl.textContent = secondsToMinutes(state.break);
   timeRemainingEl.textContent = secondsToMinutesSeconds(state.session);
   currentPeriodEl.textContent = state.currentPeriod;
+  [...document.querySelectorAll('.active')].forEach((el) => el.classList.remove('active'));
 }
 
 function increment(event) {
@@ -125,4 +120,15 @@ function decrement(event) {
   if (period === state.currentPeriod.toLowerCase) {
     timeRemainingEl.textContent = state[period];
   }
+}
+
+function secondsToMinutes(time) {
+  let minutes = Math.floor(time / 60);
+  return minutes;
+}
+
+function secondsToMinutesSeconds(time) {
+  let minutes = Math.floor(time / 60);
+  let seconds = time - minutes * 60;
+  return `${minutes} : ${seconds}`;
 }
