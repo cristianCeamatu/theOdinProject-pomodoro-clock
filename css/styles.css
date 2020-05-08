@@ -121,3 +121,19 @@ h1 {
   color: #ff4444;
   pointer-events: none;
 }
+
+/* Media */
+@media(max-width: 768px) {
+  .pomodoro-clock {
+    font-size: 24px;
+    width: 20rem;
+    height: 20rem;
+  }
+  .settings ul li:not(:last-child) {
+    margin-right: 20px;
+  }
+  .display {
+    height: 80%;
+    padding: 20px;
+  }
+}
