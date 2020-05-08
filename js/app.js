@@ -40,7 +40,7 @@ resetEl.addEventListener('click', reset);
 
 function play() {
   if (state.timer === false) {
-    startClock = setInterval(tick , 100);
+    startClock = setInterval(tick , 1000);
     state.timer = true;
   }
 
