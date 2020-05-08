@@ -99,6 +99,8 @@ function reset() {
     currentPeriod: 'Session',
     timer: false,
   }
+  sessionDisplayEl.textContent = secondsToMinutes(state.session);
+  breakDisplayEl.textContent = secondsToMinutes(state.break);
   timeRemainingEl.textContent = secondsToMinutesSeconds(state.session);
   currentPeriodEl.textContent = state.currentPeriod;
 }
