@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Pomodoro Clock</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Pomodoro Clock</h1>
+    <main class="pomodoro-clock">
+      <section class="settings">
+        <div class="settings-session">
+          <h3>Session</h3>
+          <ul id="session">
+            <li class="decrement"><i class="fas fa-chevron-down"></i></li>
+            <li class="session-display"></li>
+            <li class="increment"><i class="fas fa-chevron-up"></i></li>
+          </ul>
+        </div>
+        <div class="settings-break">
+          <h3>Break</h3>
+          <ul id="break">
+            <li class="decrement"><i class="fas fa-chevron-down"></i></li>
+            <li class="break-display"></li>
+            <li class="increment"><i class="fas fa-chevron-up"></i></li>
+          </ul>
+        </div>
+      </section>
+      <section class="display">
+        <ul class="top-buttons">
+          <li class="play-button"><i class="fas fa-play"></i></li>
+          <li class="reset-button"><i class="fas fa-sync-alt"></i></li>
+        </ul>
+        <div class="main-display">
+          <h3 class="current-period"></h3>
+          <h2 class="time-remaining"></h2>
+        </div>
+        <ul class="bottom-buttons">
+          <li class="pause-button"><i class="fas fa-pause"></i></li>
+          <li class="stop-button"><i class="fas fa-stop"></i></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>
