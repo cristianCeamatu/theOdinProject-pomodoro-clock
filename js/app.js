@@ -129,6 +129,6 @@ function secondsToMinutes(time) {
 
 function secondsToMinutesSeconds(time) {
   let minutes = Math.floor(time / 60);
-  let seconds = time - minutes * 60;
+  let seconds = String(time - minutes * 60).padStart(2, '0');
   return `${minutes} : ${seconds}`;
 }
