@@ -1,4 +1,4 @@
-# This is a Pomodoro clock web app
+# This is a Pomodoro clock web app built in few hours
 
 > The project is a pomodoro clock web app build for [TheOdinProject](https://www.theodinproject.com/). Enjoy your focus times!
 
